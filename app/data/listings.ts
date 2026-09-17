@@ -1,0 +1,78 @@
+export const listings = [
+  {
+    id: 1,
+    areaSlug: "tomball",
+    title: "123 Main Street",
+    price: "$725,000",
+    beds: 4,
+    baths: 3,
+    image: "/demo/listing-1.jpg",
+  },
+
+  {
+    id: 2,
+    areaSlug: "spring-klein",
+    title: "456 Oak Drive",
+    price: "$590,000",
+    beds: 3,
+    baths: 2,
+    image: "/demo/listing-2.jpg",
+  },
+   {
+    id: 3,
+    areaSlug: "magnolia",
+    title: "123 Main Street",
+    price: "$725,000",
+    beds: 4,
+    baths: 3,
+    image: "/demo/listing-3.jpg",
+  },
+
+  {
+    id: 4,
+    areaSlug: "northwest-houston",
+    title: "456 Oak Drive",
+    price: "$590,000",
+    beds: 3,
+    baths: 2,
+    image: "/demo/listing-4.jpg",
+  },
+   {
+    id: 1,
+    areaSlug: "humble-atascocita",
+    title: "123 Main Street",
+    price: "$725,000",
+    beds: 4,
+    baths: 3,
+    image: "/demo/listing-1.jpg",
+  },
+
+  {
+    id: 2,
+    areaSlug: "porter-new-caney",
+    title: "456 Oak Drive",
+    price: "$590,000",
+    beds: 3,
+    baths: 2,
+    image: "/demo/listing-2.jpg",
+  },
+   {
+    id: 3,
+    areaSlug: "sugar-land",
+    title: "123 Main Street",
+    price: "$725,000",
+    beds: 4,
+    baths: 3,
+    image: "/demo/listing-3.jpg",
+  },
+
+  {
+    id: 4,
+    areaSlug: "spring-klein",
+    title: "456 Oak Drive",
+    price: "$590,000",
+    beds: 3,
+    baths: 2,
+    image: "/demo/listing-4.jpg",
+  },
+];

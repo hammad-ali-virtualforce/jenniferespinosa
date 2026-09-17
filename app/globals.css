@@ -1,26 +1,325 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-body: var(--font-montserrat);
+  --font-heading: var(--font-alex-brush);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-heading {
+  font-family: var(--font-heading), cursive;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.testimonial-menu > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonial-menu > a::before {
+  content: "♥";
+  color: #e31b23;
+  font-size: 15px;
+  line-height: 1;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+li.explore-menuitem a {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 14px 22px;
+}
+
+li.explore-menuitem a:hover{
+      color: rgb(255, 255, 255);
+    background: #000e35;
+    border: 1px solid #000e35;
+    padding: 14px 22px;
+}
+
+li.contactus-menuitem a:hover {
+    color: rgb(255, 255, 255);
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 14px 22px;
+}
+
+li.contactus-menuitem a{
+      color: rgb(255, 255, 255);
+    background: #000e35;
+    border: 1px solid #000e35;
+    padding: 14px 22px;
+}
+
+/* Shared icon alignment */
+.explore-menuitem > a,
+.contactus-menuitem > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Location Pin */
+.explore-menuitem > a::before {
+  content: "";
+  width: 14px;
+  height: 17px;
+  flex-shrink: 0;
+
+  background-color: #fff;
+
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.69 2 6 4.69 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6zm0 8.2A2.2 2.2 0 1 1 12 5.8a2.2 2.2 0 0 1 0 4.4z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.69 2 6 4.69 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6zm0 8.2A2.2 2.2 0 1 1 12 5.8a2.2 2.2 0 0 1 0 4.4z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+
+/* Paper Plane */
+.contactus-menuitem > a::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+
+  background-color: #fff;
+
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 2 9.8 13.2 4.9 10.1 22 2zM9.8 13.2 13.5 22 22 2 9.8 13.2zM9.8 13.2 2 15.3l2.9-5.2 4.9 3.1z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 2 9.8 13.2 4.9 10.1 22 2zM9.8 13.2 13.5 22 22 2 9.8 13.2zM9.8 13.2 2 15.3l2.9-5.2 4.9 3.1z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+
+.content-media-description p {
+  margin: 0 0 4px;
+}
+
+.content-media-description p:last-child {
+  margin-bottom: 0;
+}
+
+.content-media-description strong,
+.content-media-description b {
+  font-weight: 600;
+}
+
+.content-media-description a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content-media-description ul,
+.content-media-description ol {
+  margin: 16px 0;
+  padding-left: 22px;
+}
+
+.content-media-description ul {
+  list-style: disc;
+}
+
+.content-media-description ol {
+  list-style: decimal;
+}
+
+.cta-description p {
+  margin: 0 0 10px;
+}
+
+.cta-description p:last-child {
+  margin-bottom: 0;
+}
+
+.cta-description strong,
+.cta-description b {
+  font-weight: 600;
+}
+
+.cta-description a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+.area-content p {
+  margin: 0 0 22px;
+}
+
+.area-content p:last-child {
+  margin-bottom: 0;
+}
+
+.area-content h2,
+.area-content h3,
+.area-content h4 {
+  margin: 38px 0 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #303030;
+}
+
+.area-content h2 {
+  font-size: 32px;
+}
+
+.area-content h3 {
+  font-size: 25px;
+}
+
+.area-content strong,
+.area-content b {
+  font-weight: 600;
+}
+
+.area-content ul,
+.area-content ol {
+  margin: 20px 0;
+  padding-left: 24px;
+}
+
+.area-content ul {
+  list-style: disc;
+}
+
+.area-content ol {
+  list-style: decimal;
+}
+
+.area-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.listing-slider {
+  scrollbar-width: none;
+}
+
+.listing-slider::-webkit-scrollbar {
+  display: none;
+}
+.buying-selling-slider {
+  scrollbar-width: none;
+}
+
+.buying-selling-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.blog-content {
+  color: #4a4a4a;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.blog-content > *:first-child {
+  margin-top: 0;
+}
+
+.blog-content p {
+  margin: 0 0 1.6em;
+}
+
+.blog-content h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.55em;
+  color: #303030;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.blog-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  color: #303030;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.blog-content h4 {
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+  color: #303030;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.blog-content ul {
+  list-style: disc;
+}
+
+.blog-content ol {
+  list-style: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.6em;
+}
+
+.blog-content a {
+  color: #fc1201;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-content strong {
+  color: #303030;
+  font-weight: 600;
+}
+
+.blog-content blockquote {
+  margin: 2.5em 0;
+  border-left: 3px solid #fc1201;
+  padding: 0.5em 0 0.5em 1.5em;
+  color: #303030;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.blog-content img {
+  width: 100%;
+  height: auto;
+  margin: 2.5em 0;
+}
+
+.blog-content figure {
+  margin: 2.5em 0;
+}
+
+.blog-content figcaption {
+  margin-top: 0.75em;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+}
+
+.blog-content iframe {
+  width: 100%;
+  max-width: 100%;
+  margin: 2.5em 0;
 }
