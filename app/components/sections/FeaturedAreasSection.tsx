@@ -39,6 +39,7 @@ export default function FeaturedAreasSection({
         {/* =========================
             SECTION HEADING
         ========================= */}
+
         <div
           className="
             mx-auto
@@ -56,7 +57,7 @@ export default function FeaturedAreasSection({
                 font-medium
                 uppercase
                 tracking-[0.18em]
-                text-[#fff]
+                text-white
               "
             >
               {data.eyebrow}
@@ -70,7 +71,7 @@ export default function FeaturedAreasSection({
                 text-[clamp(58px,7vw,96px)]
                 font-normal
                 leading-[0.9]
-                text-[#fff]
+                text-white
               "
             >
               {data.heading}
@@ -85,7 +86,7 @@ export default function FeaturedAreasSection({
                 max-w-[720px]
                 text-[15px]
                 leading-[1.8]
-                text-[#fff]
+                text-white
               "
             >
               {data.description}
@@ -102,42 +103,47 @@ export default function FeaturedAreasSection({
             Last 3:
             4 columns each out of 12
         ========================= */}
+
         <div
           className="
             grid
             grid-cols-1
             gap-x-6
             gap-y-10
+
             sm:grid-cols-2
+
             lg:grid-cols-12
             lg:gap-x-7
             lg:gap-y-14
           "
         >
-          {areas.map((area, index) => {
-            const secondRow = index >= 4;
+          {areas.map(
+            (area, index) => {
+              const secondRow =
+                index >= 4;
 
-            return (
-              <div
-                key={area.id}
-                className={`
-                  sm:col-span-1
+              return (
+                <div
+                  key={area.id}
+                  className={`
+                    sm:col-span-1
 
-                  ${
-                    secondRow
-                      ? "lg:col-span-4"
-                      : "lg:col-span-3"
-                  }
-                `}
-              >
-                <AreaCard
-                  area={area}
-                  featured
-                  large={secondRow}
-                />
-              </div>
-            );
-          })}
+                    ${
+                      secondRow
+                        ? "lg:col-span-4"
+                        : "lg:col-span-3"
+                    }
+                  `}
+                >
+                  <AreaCard
+                    area={area}
+                    featured
+                  />
+                </div>
+              );
+            }
+          )}
         </div>
       </div>
     </section>

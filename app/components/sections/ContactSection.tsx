@@ -401,7 +401,7 @@ const mapSrc = contact?.address
           "
         >
           <iframe
-            src={mapSrc}
+            src={mapSrc?? undefined}
             title="Jennifer Espinosa Location"
             width="100%"
             height="500"
